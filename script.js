@@ -24,7 +24,7 @@ startButtonElement.addEventListener("click", start);
 function start() {
   if (!timer) {                         //speeding on each new click fix
     timer = setInterval(run, 10);
-    lapsReset()
+    lapsReset();
   }
 }
 
@@ -76,6 +76,8 @@ function stop() {
     ":" +
     (miliSeconds < 10 ? `0${miliSeconds}` : `${miliSeconds}`);
   miliSeconds++;
+
+  lapsReset();
 }
 
 //lap function
